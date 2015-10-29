@@ -337,7 +337,7 @@
       vm.sessions = [];
       vm.title = 'Sessions';
 
-      ////////////
+  
 
       function gotoSession() {
         /* */
@@ -681,7 +681,7 @@
       };
       return service;
 
-      ////////////
+  
 
       function save() {
           /* */
@@ -771,7 +771,7 @@
 
       return service;
 
-      ////////////
+  
 
       function getAvengers() {
           // implementation details go here
@@ -1249,7 +1249,7 @@
 
       activate();
 
-      ////////////
+  
 
       function activate() {
           return dataservice.getAvengers().then(function(data) {
@@ -1834,7 +1834,7 @@
       toastr.options.timeOut = 4000;
       toastr.options.positionClass = 'toast-bottom-right';
 
-      ////////////////
+  ////
 
       function configureStateHelper() {
           routerHelperProvider.configure({
