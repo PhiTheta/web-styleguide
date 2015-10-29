@@ -28,7 +28,6 @@
   1. [JSCS](#jscs)
   1. [Constants](#constants)
   1. [File Templates and Snippets](#file-templates-and-snippets)
-  1. [Routing](#routing)
   1. [Task Automation](#task-automation)
   1. [Filters](#filters)
 
@@ -2066,99 +2065,6 @@ Use file templates or snippets to help follow consistent styles and patterns. He
     ng-f // creates an Angular factory
     ng-m // creates an Angular module
     ```
-
-
-## Routing
-Client-side routing is important for creating a navigation flow between views and composing views that are made of many smaller templates and directives.
-
-###### [Style [Y270](#style-y270)]
-
-  - Use the [AngularUI Router](http://angular-ui.github.io/ui-router/) for client-side routing.
-
-    *Why?*: UI Router offers all the features of the Angular router plus a few additional ones including nested routes and states.
-
-    *Why?*: The syntax is quite similar to the Angular router and is easy to migrate to UI Router.
-
-  - Note: You can use a provider such as the `routerHelperProvider` shown below to help configure states across files, during the run phase.
-
-    ```javascript
-    // customers.routes.js
-    angular
-        .module('app.customers')
-        .run(appRun);
-
-    
-    function appRun(routerHelper) {
-        routerHelper.configureStates(getStates());
-    }
-
-    function getStates() {
-        return [
-            {
-                state: 'customer',
-                config: {
-                    abstract: true,
-                    template: '<ui-view class="shuffle-animation"/>',
-                    url: '/customer'
-                }
-            }
-        ];
-    }
-    ```
-
-    ```javascript
-    // routerHelperProvider.js
-    angular
-        .module('blocks.router')
-        .provider('routerHelper', routerHelperProvider);
-
-    
-    function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvider) {
-        /* jshint validthis:true */
-        this.$get = RouterHelper;
-
-        $locationProvider.html5Mode(true);
-
-        
-        function RouterHelper($state) {
-            var hasOtherwise = false;
-
-            var service = {
-                configureStates: configureStates,
-                getStates: getStates
-            };
-
-            return service;
-
-            ///////////////
-
-            function configureStates(states, otherwisePath) {
-                states.forEach(function(state) {
-                    $stateProvider.state(state.state, state.config);
-                });
-                if (otherwisePath && !hasOtherwise) {
-                    hasOtherwise = true;
-                    $urlRouterProvider.otherwise(otherwisePath);
-                }
-            }
-
-            function getStates() { return $state.get(); }
-        }
-    }
-    ```
-
-###### [Style [Y271](#style-y271)]
-
-  - Define routes for views in the module where they exist. Each module should contain the routes for the views in the module.
-
-    *Why?*: Each module should be able to stand on its own.
-
-    *Why?*: When removing a module or adding a module, the app will only contain routes that point to existing views.
-
-    *Why?*: This makes it easy to enable or disable portions of an application without concern over orphaned routes.
-
-**[Back to top](#table-of-contents)**
-
 
 ## Filters
 
