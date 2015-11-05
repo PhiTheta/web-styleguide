@@ -592,7 +592,7 @@
 ### Singletons
 ###### [Style [Y040](#style-y040)]
 
-  - Services are instantiated with the `new` keyword, use `this` for public methods and variables. Since these are so similar to factories, use a factory instead for consistency.
+  - Services are instantiated with the `new` keyword, use `this` for public methods and variables. Since these are so similar to factories, USE A FACTORY instead for consistency.
 
     Note: [All Angular services are singletons](https://docs.angularjs.org/guide/services). This means that there is only one instance of a given service per injector.
 
@@ -674,15 +674,13 @@
   /* recommended */
   function dataService() {
       var someValue = '';
-      var service = {
+      
+      return {
           save: save,
           someValue: someValue,
           validate: validate
       };
-      return service;
-
   
-
       function save() {
           /* */
       };
@@ -692,10 +690,6 @@
       };
   }
   ```
-
-  This way bindings are mirrored across the host object, primitive values cannot update alone using the revealing module pattern.
-
-    ![Factories Using "Above the Fold"](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/above-the-fold-2.png)
 
 ### Function Declarations to Hide Implementation Details
 ###### [Style [Y053](#style-y053)]
