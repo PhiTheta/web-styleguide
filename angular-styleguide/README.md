@@ -44,7 +44,7 @@
   /* avoid */
   angular
       .module('app', ['ngRoute'])
-      .controller('SomeController', SomeController)
+      .controller('someController', someController)
       .factory('someFactory', someFactory);
 
   function SomeController() { }
@@ -68,7 +68,7 @@
   // someController.js
   angular
       .module('app')
-      .controller('SomeController', SomeController);
+      .controller('someController', someController);
 
   function SomeController() { }
   ```
@@ -135,7 +135,7 @@
   ```javascript
   /* avoid */
   var app = angular.module('app');
-  app.controller('SomeController', SomeController);
+  app.controller('someController', someController);
 
   function SomeController() { }
   ```
@@ -144,7 +144,7 @@
   /* recommended */
   angular
       .module('app')
-      .controller('SomeController', SomeController);
+      .controller('someController', someController);
 
   function SomeController() { }
   ```
@@ -170,19 +170,19 @@
   /* avoid */
   angular
       .module('app')
-      .controller('Dashboard', function() { })
+      .controller('dashboardController', function() { })
       .factory('logger', function() { });
   ```
 
   ```javascript
   /* recommended */
 
-  // dashboard.js
+  // dashboard.controller.js
   angular
       .module('app')
-      .controller('Dashboard', Dashboard);
+      .controller('dashboardController', dashboardController);
 
-  function Dashboard() { }
+  function dashboardController() { }
   ```
 
   ```javascript
@@ -841,9 +841,9 @@
   // controller calling the dataservice factory
   angular
       .module('app.avengers')
-      .controller('Avengers', Avengers);
+      .controller('avengersController', avengersController);
 
-  function Avengers(dataservice, logger) {
+  function avengersController(dataservice, logger) {
       var vm = this;
       vm.avengers = [];
 
@@ -1377,7 +1377,7 @@
 
   - Use consistent names for all components following a pattern that describes the component's feature then (optionally) its type. My recommended pattern is `feature.type.js`. There are 2 names for most assets:
     * the file name (`avengers.controller.js`)
-    * the registered component name with Angular (`AvengersController`)
+    * the registered component name with Angular (`avengersController`)
 
     *Why?*: Naming conventions help provide a consistent way to find content at a glance. Consistency within the project is vital. Consistency with a team is important. Consistency across a company provides tremendous efficiency.
 
@@ -1472,9 +1472,9 @@
     // avengers.controller.js
     angular
         .module
-        .controller('HeroAvengersController', HeroAvengersController);
+        .controller('heroAvengersController', heroAvengersController);
 
-    function HeroAvengersController() { }
+    function heroAvengersController() { }
     ```
 
 ### Controller Name Suffix
@@ -1492,9 +1492,9 @@
     // avengers.controller.js
     angular
         .module
-        .controller('AvengersController', AvengersController);
+        .controller('avengersController', avengersController);
 
-    function AvengersController() { }
+    function avengersController() { }
     ```
 
 ### Factory Names
