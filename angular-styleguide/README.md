@@ -408,7 +408,7 @@
    * avoid
    * Using function expressions.
    */
-  function Avengers(dataservice, logger) {
+  function avengerController(dataservice, logger) {
       var vm = this;
       vm.avengers = [];
       vm.title = 'Avengers';
@@ -440,7 +440,7 @@
    * Using function declarations
    * and bindable members up top.
    */
-  function Avengers(dataservice, logger) {
+  function avengerController(dataservice, logger) {
       var vm = this;
       vm.avengers = [];
       vm.getAvengers = getAvengers;
@@ -841,9 +841,9 @@
   // controller calling the dataservice factory
   angular
       .module('app.avengers')
-      .controller('avengersController', avengersController);
+      .controller('avengerController', avengerController);
 
-  function avengersController(dataservice, logger) {
+  function avengerController(dataservice, logger) {
       var vm = this;
       vm.avengers = [];
 
@@ -1222,7 +1222,7 @@
 
   ```javascript
   /* avoid */
-  function Avengers(dataservice) {
+  function avengerController(dataservice) {
       var vm = this;
       vm.avengers = [];
       vm.title = 'Avengers';
@@ -1236,7 +1236,7 @@
 
   ```javascript
   /* recommended */
-  function Avengers(dataservice) {
+  function avengerController(dataservice) {
       var vm = this;
       vm.avengers = [];
       vm.title = 'Avengers';
@@ -1377,7 +1377,7 @@
 
   - Use consistent names for all components following a pattern that describes the component's feature then (optionally) its type. My recommended pattern is `feature.type.js`. There are 2 names for most assets:
     * the file name (`avengers.controller.js`)
-    * the registered component name with Angular (`avengersController`)
+    * the registered component name with Angular (`avengerController`)
 
     *Why?*: Naming conventions help provide a consistent way to find content at a glance. Consistency within the project is vital. Consistency with a team is important. Consistency across a company provides tremendous efficiency.
 
@@ -1472,9 +1472,9 @@
     // avengers.controller.js
     angular
         .module
-        .controller('heroAvengersController', heroAvengersController);
+        .controller('heroAvengerController', heroAvengerController);
 
-    function heroAvengersController() { }
+    function heroAvengerController() { }
     ```
 
 ### Controller Name Suffix
@@ -1492,9 +1492,9 @@
     // avengers.controller.js
     angular
         .module
-        .controller('avengersController', avengersController);
+        .controller('avengerController', avengerController);
 
-    function avengersController() { }
+    function avengerController() { }
     ```
 
 ### Factory Names
