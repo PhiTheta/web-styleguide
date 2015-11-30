@@ -352,8 +352,6 @@
       }
   ```
 
-    ![Controller Using "Above the Fold"](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/above-the-fold-1.png)
-
   Note: If the function is a 1 liner consider keeping it right up top, as long as readability is not affected.
 
   ```javascript
@@ -2048,7 +2046,7 @@ Use file templates or snippets to help follow consistent styles and patterns. He
 
   - Angular snippets and file templates that follow these styles and guidelines. You can import them into your WebStorm settings:
 
-    - Download the [WebStorm Angular file templates and snippets](assets/webstorm-angular-file-template.settings.jar?raw=true)
+    - Download the [WebStorm Angular file templates and snippets](assets/settings.jar?raw=true)
     - Open WebStorm and go to the `File` menu
     - Choose the `Import Settings` menu option
     - Select the file and click `OK`
