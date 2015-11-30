@@ -30,7 +30,8 @@
   1. [File Templates and Snippets](#file-templates-and-snippets)
   1. [Task Automation](#task-automation)
   1. [Filters](#filters)
-
+  1. [Tools](#tools)
+  
 ## Single Responsibility
 
 ### Rule of 1
@@ -2065,6 +2066,95 @@ Use file templates or snippets to help follow consistent styles and patterns. He
   - Avoid using filters for scanning all properties of a complex object graph. Use filters for select properties.
 
     *Why?*: Filters can easily be abused and negatively affect performance if not used wisely, for example when a filter hits a large and deep object graph.
+
+
+**[Back to top](#table-of-contents)**
+
+## Tools
+
+###### [Style [Y421](#style-y252)]
+
+Use any IDE you like.  
+
+  **[Webstorm configuration](#table-of-contents)**
+
+- Here are Webstorm licenses:
+
+User name: RedMart Ltd
+
+===== LICENSE BEGIN ===== TAKEN Daniil
+1012909-01052015
+00000sLb!2CrM"SWQlpzN9OhTZil4m
+gGxVRLflncIjAnX6szjbJu2WJbwN9G
+FuUJHHMfDONOARyGLG6wtVBVr!xCFX
+===== LICENSE END =====
+
+===== LICENSE BEGIN ===== TAKEN
+1012909-01052015
+00001I0lUuBkRDFCaEfBtWaMNUX!AN
+H4HoOAPF7mhvnhkxaXPfnA1LV9!yLw
+38jPya!4Xm7hGg283CrKotyl91BL91
+===== LICENSE END =====
+
+===== LICENSE BEGIN ===== TAKEN Chinmaya
+1012909-01052015
+00000UgPwIBubk8"ROLsm7VhDUqOWR
+tu63WH!qYmNDvFH725DQwx3aXKJrOz
+Hojrh8RxhyyZcctFDMPJeHr1ervuOu
+===== LICENSE END =====
+
+
+ ===== LICENSE BEGIN ===== TAKEN Eshan
+1012909-01052015
+00000OR16!U9!BGMpTg"2wWgopxX0X
+4sOUwNTKYt3wvO6ezOv!a3XHhQqkQn
+M9fF7GyokX77O5wCM0fxBmrdtEC0MK
+===== LICENSE END =====
+
+
+===== LICENSE BEGIN ===== TAKEN Clyde
+1012909-01052015
+00000nm9A3!CaBHJR2v67SvObZ2Amj
+yrlVhQomX4tIMTyw6Z4eREBGRQB4po
+Hz0J1cO2RyZYDH4mF"6OQPafjtlJfP
+===== LICENSE END =====
+
+
+===== LICENSE BEGIN ===== TAKEN Aboo
+
+1012909-17092015
+000015pcBAx0AIVNeYrGj4TBOaiEfN
+T3nmMUZEaQA6MP2rkNrW971AgOO9St
+J6"8uJgpq4ZGH6RIcxtUjaWAdv7oeo
+===== LICENSE END =====
+
+===== LICENSE BEGIN ===== TAKEN Uday
+1012909-17092015
+00002scBHg!TyOL4eDrueF1Uf3hbw!
+!ybfeTRPWZLpRVzQDjC8R5Jz4Ouaow
+uBZ19PDiPGbarIS!xgxc5xecy8r1Bn
+===== LICENSE END =====
+
+===== LICENSE BEGIN ===== TAKEN Naveen
+1012909-17092015
+00002dwrHtHIH66CPYRbKEJ8IO5tlq
+FPz4EfIbaxrOpDCM5gWRZNzExOEDuo
+xDGpNkoPSxUN!8BYvqHAvPqorTwM0Y
+===== LICENSE END =====
+
+===== LICENSE BEGIN ===== TAKEN Aswani
+1012909-17092015
+00000KMgJMesR"QL9zn!KXh4iXX4jR
+uLAKxnVkanfNNBytkt8OoVLNLG1jo0
+E5lEy4zfbfCHCDAnpk4yczV!3Q9Cax
+===== LICENSE END =====
+
+===== LICENSE BEGIN ===== TAKEN Vinay
+1012909-17092015
+00000ZQ2pr2KOceQ28NaE0KNZzpLbX
+K5xNsDeJvUxT9raAM0CWkesillmWuz
+BVck3tiP6AlTT3mOETcMrZqIJvrq8p
+===== LICENSE END =====
 
 
 **[Back to top](#table-of-contents)**
