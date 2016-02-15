@@ -48,7 +48,7 @@
       .controller('someController', someController)
       .factory('someFactory', someFactory);
 
-  function SomeController() { }
+  function someController() { }
 
   function someFactory() { }
   ```
@@ -71,7 +71,7 @@
       .module('app')
       .controller('someController', someController);
 
-  function SomeController() { }
+  function someController() { }
   ```
 
   ```javascript
@@ -138,7 +138,7 @@
   var app = angular.module('app');
   app.controller('someController', someController);
 
-  function SomeController() { }
+  function someController() { }
   ```
 
   ```javascript
@@ -147,7 +147,7 @@
       .module('app')
       .controller('someController', someController);
 
-  function SomeController() { }
+  function someController() { }
   ```
 
 ### Setting vs Getting
@@ -289,7 +289,7 @@
   ```
 
   ```javascript
-  function SomeController($scope, $log) {
+  function someController($scope, $log) {
       var vm = this;
       vm.title = 'Some Title';
 
